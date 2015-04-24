@@ -197,6 +197,10 @@ xsel-output )))
 
 ;; EPC: Depedency... works as the glue (middleware)
 
+(require 'python)
+(define-key python-mode-map (kbd "C-c C-c")
+  (lambda () (interactive) (python-shell-send-buffer t)))
+
 ;;---------------------------------------------------------------multiple-cursors
 (require 'multiple-cursors)
 
